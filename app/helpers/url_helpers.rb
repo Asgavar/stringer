@@ -28,11 +28,12 @@ module UrlHelpers
     uri = URI.parse(url.strip)
 
     # resolve (protocol) relative URIs
-    if uri.relative?
-      base_uri = URI.parse(base_url.strip)
-      scheme = base_uri.scheme || "http"
-      uri = URI.join("#{scheme}://#{base_uri.host}", uri)
-    end
+    #if uri.relative?
+      #base_uri = URI.parse(base_url.strip)
+      #scheme = base_uri.scheme || "https"
+      #scheme = "https"
+      #uri = URI.join("#{scheme}://#{base_uri.host}", uri)
+    #end
 
     uri.to_s
   end
